@@ -3,7 +3,7 @@ type StatBarProps = {
     label: string
 }
 
-export function StatBar({ stat, label }: StatBarProps) {
+export default function StatBar({ stat, label }: StatBarProps) {
     return <div className={'flex flex-row'}>
         <div className={'w-[25%]'}>{label}</div>
         <div className={'w-[65%]'}>

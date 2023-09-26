@@ -5,7 +5,7 @@ type CapabilitiesProps = {
     ability: Ability
 }
 
-export function Capabilities({ability, moves}: CapabilitiesProps) {
+export default function Capabilities({ ability, moves }: CapabilitiesProps) {
     return <div className={'px-1 text-xl'}>
         <div className={'flex flex-row justify-between capitalize'}>ABILITY: {ability.name}</div>
         <div className={'pb-4 text-base'}>{ability.description}</div>
@@ -13,7 +13,7 @@ export function Capabilities({ability, moves}: CapabilitiesProps) {
             {moves.map((m) => <div className={'pb-4'} key={m.name}>
                 <div className={'capitalize'}>MOVE: {m.name}</div>
                 <div className={'text-base'}>{m.description}</div>
-                <div>{m.power?<>Power: {m.power}</>:<>(passive move)</>}</div>
+                <div>{m.power ? <>Power: {m.power}</> : <>(passive move)</>}</div>
             </div>)}
         </div>
     </div>

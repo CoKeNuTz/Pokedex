@@ -1,6 +1,6 @@
 type LeftLoadingScreenProps = {}
 
-export function LeftLoading({ }: LeftLoadingScreenProps) {
+export default function LeftLoading({ }: LeftLoadingScreenProps) {
     return <>
         <div className={'animate-pulse flex flex-col p-4'}>
             <div className={'grid grid-cols-3 gap-4'}>

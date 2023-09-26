@@ -4,7 +4,7 @@ type HabitatBGProps = {
     habitat: string
 }
 
-export function HabitatBG({ habitat }: HabitatBGProps) {
+export default function HabitatBG({ habitat }: HabitatBGProps) {
     switch (habitat) {
         case 'waters-edge':
             return <Image src={'/static/waters-edge.webp'} alt={'bg'} height={500} width={500}></Image>
@@ -20,9 +20,9 @@ export function HabitatBG({ habitat }: HabitatBGProps) {
             return <Image src={'/static/rough-terrain.webp'} alt={'bg'} height={500} width={500}></Image>
         case 'urban':
             return <Image src={'/static/urban.webp'} alt={'bg'} height={500} width={500}></Image>
-        case 'cave' :
+        case 'cave':
             return <Image src={'/static/cave.webp'} alt={'bg'} height={500} width={500}></Image>
-        case 'forest' :
+        case 'forest':
             return <Image src={'/static/forest.webp'} alt={'bg'} height={500} width={500}></Image>
     }
 }

@@ -7,7 +7,7 @@ type MiniPokemonInfoProps = {
     parentName?: string
 }
 
-export function MiniPokemonInfo({ sprite, id, name, parentName }: MiniPokemonInfoProps) {
+export default function MiniPokemonInfo({ sprite, id, name, parentName }: MiniPokemonInfoProps) {
 
     return <div className={'flex flex-row'}>
         <div className={'flex justify-center'}><Image src={sprite} alt={'sprite'} height={90} width={90}></Image></div>

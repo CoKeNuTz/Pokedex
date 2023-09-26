@@ -1,6 +1,6 @@
 type RightLoadingScreenProps = {}
 
-export function RightLoading({ }: RightLoadingScreenProps) {
+export default function RightLoading({ }: RightLoadingScreenProps) {
     return <div className="flex flex-col m-3 animate-pulse">
         <div className="flex flex-row">
             <div className="rounded-full bg-gray-400 mr-3 h-12 w-12"></div>

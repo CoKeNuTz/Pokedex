@@ -1,13 +1,13 @@
 import { EvolutionChain, PokemonInfo } from "@/Pokemoninfo"
 import { useEffect, useState } from "react"
-import { MiniPokemonInfo } from "../common/MiniPokemonInfo"
+import MiniPokemonInfo from "../common/MiniPokemonInfo"
 
 type EvolutionChainProps = {
     chain: Array<EvolutionChain>
     setLoading: Function
 }
 
-export function EvolutionChain({ chain, setLoading }: EvolutionChainProps) {
+export default function EvolutionChain({ chain, setLoading }: EvolutionChainProps) {
     const [evolution, setEvolution] = useState<Array<{ index: number, pokemon: PokemonInfo, parent: number }>>([])
 
     useEffect(() => {

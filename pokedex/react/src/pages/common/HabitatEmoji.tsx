@@ -4,9 +4,9 @@ type HabitatProps = {
     habitat: Habitat
 }
 
-export function Habitat({habitat}: HabitatProps) {
+export default function Habitat({ habitat }: HabitatProps) {
     function habitatEmoji(color: string) {
-        switch(color) {
+        switch (color) {
             case 'cave':
                 return ' ⛺'
             case 'forest':
@@ -14,7 +14,7 @@ export function Habitat({habitat}: HabitatProps) {
             case 'grassland':
                 return ' 🍃'
             case 'mountain':
-                return ' 🏔️'    
+                return ' 🏔️'
             case 'rare':
                 return ' 🌈'
             case 'rough-terrain':
@@ -25,7 +25,7 @@ export function Habitat({habitat}: HabitatProps) {
                 return ' 🏢'
             case 'waters-edge':
                 return ' 🏝️'
-            }
+        }
     }
-    return <div>{habitatEmoji(habitat)}</div> 
+    return <div>{habitatEmoji(habitat)}</div>
 }

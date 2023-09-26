@@ -4,9 +4,9 @@ type ColorProps = {
     color: Color
 }
 
-export function Color({color}: ColorProps) {
+export default function Color({ color }: ColorProps) {
     function colorPill(color: string) {
-        switch(color) {
+        switch (color) {
             case 'black':
                 return 'flex ml-2 w-4 h-4 mt-1.5 rounded-full bg-black'
             case 'blue':
@@ -14,7 +14,7 @@ export function Color({color}: ColorProps) {
             case 'brown':
                 return 'flex ml-2 w-4 h-4 mt-1.5 rounded-full bg-amber-900'
             case 'gray':
-                return 'flex ml-2 w-4 h-4 mt-1.5 rounded-full bg-gray-500'    
+                return 'flex ml-2 w-4 h-4 mt-1.5 rounded-full bg-gray-500'
             case 'green':
                 return 'flex ml-2 w-4 h-4 mt-1.5 rounded-full bg-green-600'
             case 'pink':
@@ -24,10 +24,10 @@ export function Color({color}: ColorProps) {
             case 'yellow':
                 return 'flex ml-2 w-4 h-4 mt-1.5 rounded-full bg-yellow-400'
             case 'red':
-                return 'flex ml-2 w-4 h-4 mt-1.5 rounded-full bg-red-600'    
+                return 'flex ml-2 w-4 h-4 mt-1.5 rounded-full bg-red-600'
             case 'white':
                 return 'flex ml-2 w-4 h-4 mt-1.5 outline outline-1 rounded-full bg-white'
-            }
+        }
     }
     return <div className={colorPill(color)}></div>
 }
